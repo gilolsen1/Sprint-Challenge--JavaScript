@@ -55,12 +55,19 @@ console.log(`if marty mcfly wants to mess with rex, set car to the ${trex.period
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
 console.log(trex.roar());
 
+//commit here.
 
 // ==== Arrays ====
 
 // Given an array of college graduates.  Complete the following requests WITHOUT using any array methods like .forEach(), .map(), .reduce(), .filter()
 
-const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern State College","email":"ctorry0@macromedia.com"},
+const graduates = [
+  {"id":1,
+  "first_name":"Cynde",
+  "university":"Missouri Southern State College",
+  "email":"ctorry0@macromedia.com"
+},
+
 {"id":2,"first_name":"Saundra","university":"The School of the Art Institute of Chicago","email":"swhal1@state.gov"},
 {"id":3,"first_name":"Lambert","university":"Marian College","email":"lparham2@techcrunch.com"},
 {"id":4,"first_name":"Modestine","university":"International Medical & Technological University","email":"mdolder3@symantec.com"},
@@ -74,8 +81,15 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 /* Request 1: Create a new array called universities that contains all the univeristies in the graduates array.  
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = [];
-console.log(universities)
+
+const universities = [];                      //use let??
+
+for (let i=0; i<graduates.length; i++) {
+  universities.push(graduates[i].university);      //was using graduate twice (after sub i)
+}
+// make them alphabetical + log the result
+
+console.log(universities.sort());
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -83,15 +97,29 @@ The resulting contact information should have a space between the first name and
 Name email@example.com
 
 Log the result of your new array. */
-const contactInfo = [];
+const contactInfo = [];         //[Name1 email@example.com, Name2 email@example.com,]
+
+for (let i=0; i<graduates.length; i++){
+  contactInfo.push(`${graduates[i].first_name} ${graduates[i].email}`);
+}
 console.log(contactInfo);
 
+//saved locally
 
-/* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
+/* Request 3: Find out how many universities have the string "Uni" included in their name. 
+//Create a new array called uni that contains them all. Log the result. */
+
 const uni = [];
+
+for (i=0; i<graduates.length; i++) {
+  if (graduates[i].university.includes("Uni")) {        //ate 5 minutes missing () around if condition 115 objects.arrays
+    uni.push(graduates[i].university);
+  }  
+}
+
 console.log(uni);
 
-
+//
 // ==== ADVANCED Array Methods ====
 
 // Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
