@@ -30,21 +30,39 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+Both forEach and map are methods for arrays- forEach mutates each value in the array, while map creates a new array, leaving the original array intact.
+
 2. What is the difference between a function and a method?
+
+A method is a function as a value in object's key:value pair. 
 
 3. What is closure?
 
+Closure is the concept that describes the scope of access to data in a program.  The name-drop definition is "the lexical scope". 
+
+It's a one-way access or "visibility" concept.  Functions will have access to all variables OUTSIDE themselves, but can't "look" or access the data from functions nested deeper.  I envision the concept like crab traps inside crab traps... a crab (or data) can get all the way IN the deepest nested crab trap, but if a crab is born (or a variable declared) inside one of the traps, it could go into deeper traps, but could never get to even one level trap above where he was born.   We use closure in programming to protect our variables/data from getting accidentally mutated outside where the data is needed.
+
 4. Describe the four rules of the 'this' keyword.
 
+Default/Window Binding:  If no action is taken, "this" is bound to everything, referring to javascript itself.  So Meta.
+
+Implicit Binding:  Whenever a method is called whatever is "to the left of the dot" is this.  There's no argument to make it happen, which makes it implicit.
+
+Explicit binding:  The first argument in .call and .apply methods sets what `this` is bound to.  
+
+New:  Whenever a constructor function is called,`this` automatically refers to the resulting new object.
+
 5. Why do we need super() in an extended class?
+
+Super() links the extended class to the base class the way developers had to do with object.create before classes were a part of Javascript.   Once called, the result is the extended (child) class will inherit the base (parent's) prototype methods. Super() must be called before using "this". 
 
 ## Project Set up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
+- [ x] Create a forked copy of this project.
 - [ ] Add PM as collaborator on Github.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [ x] Clone your OWN version of Repo (Not Lambda's by mistake!).
 - [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
 - [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
 - [ ] You are now ready to build this project with your preferred IDE
