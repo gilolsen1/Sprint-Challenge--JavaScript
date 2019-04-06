@@ -23,8 +23,6 @@
         return (this.length * this.width * this.height);                      //returns 0 without ";" and with it
       }
        
-
-    
       surfaceArea() {
         return (2 * (this.length * this.width + this.length * this.height + this.width * this.height))
           }
@@ -68,26 +66,8 @@
    console.log(testCuboid.volume()); // 100
    console.log(testCuboid.surfaceArea()); // 130
   
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Test your volume and surfaceArea methods by uncommenting the logs below:
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
 
 //Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  
-//Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  
+//Find out the formulas for volume and surface area for cubes 
+//and create those methods using the dimension properties from CuboidMaker.  
 //Test your work by logging out your volume and surface area.
