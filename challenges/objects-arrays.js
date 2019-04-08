@@ -7,38 +7,64 @@
 */
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceious
-const tyrannosaurus = {
+const trex = {
   name: "tyrannosaurus",
   diet: "carnivorous",
+  weight: "7000kg",
+  length: "12m",
+  period: "Late Cretaceious",
+  roar: function(){
+return "RAWERSRARARWERSARARARRRR!"
+  }
 }
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
+const stego = {
+  name: "stegosaurus",
+  diet: "herbivorous",
+  weight: "2000kg",
+  length: "9m",
+  period: "Late Jurassic",
+}
 
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceious
+const raptor = {
+  name: "velociraptor",
+  diet: "carnivorous",
+  weight: "15kg",
+  length: "1.8m",
+  period: "Late Cretaceious",
+}
 
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log();
+console.log(`Tyrannosaurus weighed ${trex.weight}`);
 
 // What was the diet of a velociraptor?
-console.log();
+console.log(`Velocipraptor was a paleo mad man, stricly ${raptor.diet} intake`);
 
 // How long was a stegosaurus?
-console.log();
+console.log(`teeth to tail spikes, Stegosaurus measured ${stego.length}`);
 
 // What time period did tyrannosaurus live in?
-console.log();
+console.log(`Tyranosaurus was alive in the ${trex.period} era`);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+console.log(`let me hear you say ${trex.roar()}`);
 
 
 // ==== Arrays ====
 
 // Given an array of college graduates.  Complete the following requests WITHOUT using any array methods like .forEach(), .map(), .reduce(), .filter()
 
-const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern State College","email":"ctorry0@macromedia.com"},
+const graduates = [
+  {
+    "id":1,
+    "first_name":"Cynde",
+    "university":"Missouri Southern State College",
+    "email":"ctorry0@macromedia.com"
+  },
 {"id":2,"first_name":"Saundra","university":"The School of the Art Institute of Chicago","email":"swhal1@state.gov"},
 {"id":3,"first_name":"Lambert","university":"Marian College","email":"lparham2@techcrunch.com"},
 {"id":4,"first_name":"Modestine","university":"International Medical & Technological University","email":"mdolder3@symantec.com"},
@@ -53,6 +79,10 @@ const graduates = [{"id":1,"first_name":"Cynde","university":"Missouri Southern 
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
+for (let i=0; i<graduates.length; i++){
+  universities.push(graduates[i].university);
+}
+
 console.log(universities)
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
@@ -62,11 +92,23 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
+
+for (let i=0; i<graduates.length; i++){
+  contactInfo.push(graduates[i].first_name +" "+graduates[i].email)
+}
 console.log(contactInfo);
 
 
-/* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
+/* Request 3: Find out how many universities have the string "Uni" included in their name. 
+//Create a new array called uni that contains them all. Log the result. */
 const uni = [];
+
+for (i=0; i<graduates.length; i++){
+  if (graduates[i].university.includes("Uni")) {    //case sensitive
+    uni.push(graduates[i].university);
+  }
+}
+
 console.log(uni);
 
 
