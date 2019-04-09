@@ -66,6 +66,9 @@ class Cube extends Cuboid {
 
 }
 const cube1= new Cube(5);
-console.log("cube tests below");
+console.log("cube stretch problem tests below");
 console.log(cube1.volume());
 console.log(cube1.surfaceArea());
+
+console.log("first attempt was a near miss. biggest hang up was on .reduce and constructor function attrs.  worked through in after hours. reviewed and retested.")
+console.log("completed sprint on second attempt in 2.5 hours, including some stretch problems.")
