@@ -40,12 +40,32 @@ const cuboid2= new Cuboid(4,5,5,);
   
   console.log(typeof cuboid2);
   
-  
-
-  
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 console.log(cuboid2.volume()); // 100
 console.log(cuboid2.surfaceArea()); // 130
 
-// Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area.
+// Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  
+//Find out the formulas for 
+//cube volume  side, cubed.         Math.pow(this.length, 3) 
+//cube surface area                 (6*Math.pow(this.length,2))
+//and create those methods using the dimension properties from CuboidMaker.  
+//Test your work by logging out your volume and surface area.
+
+class Cube extends Cuboid {
+    constructor (length) {
+        super(length);
+    }
+    volume() {
+        return Math.pow(this.length, 3);
+    }
+
+    surfaceArea() {
+        return (6*Math.pow(this.length,2))
+    }
+
+}
+const cube1= new Cube(5);
+console.log("cube tests below");
+console.log(cube1.volume());
+console.log(cube1.surfaceArea());
